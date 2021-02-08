@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="main-rule.css" rel="stylesheet">
+    </head>
+    <body id="startbody" onload="check()">
+        <div>
+            <script src="checkifsetup.js"></script>
+            <div id="welcome">
+                <h1>Welcome to WildOS Beta! The Future of the Web</h1>
+                                <p>Welcome to Wild OS! This is a operating system created by Wild and Rare. The voices  are generated with 15.ai. The downloader is temporarily unavaliable to download apps on.</p>
+                <img>
+                <p>You will bve asked to enter an activation code. Your activation code is 123</p>
+                <button onclick='gotosecond()'>Continue to setup</button>
+            </div>
+            
+
+            
+            <div id="codeapply">
+                <h1>Do you have a save code that you would like to apply?</h1>
+                <p id="codesub">You can put your save folder in later.</p>
+                <input>
+                <button onclick="gotothird()">Apply Code</button>
+            </div>
+            
+             <div id="uichoose">
+                <h1>What UI would you like to use?</h1>
+                                                   <p id="codesub" style="font-size: xx-small;">This feature does not work currently. Therefore, Wild OS UI will be used.</p>
+                    <select>
+                    <option>Wild OS</option>
+                    <option>Windows 10</option>
+                    <option>Mac OS  Mojave</option>
+                 </select>
+
+                <button onclick="gotofourth()">Okay</button>
+            </div>
+            
+            <div id="gettingready">
+                <h1>Getting Ready. Wait.</h1>
+            </div>
+
+                <script>
+                    function gotosecond() {
+                        document.querySelector('#welcome').style.display = "none";
+                        document.querySelector('#codeapply').style.display = "block";
+                    }
+                    
+                    function gotothird() {
+                        document.querySelector('#codeapply').style.display = "none";
+                        document.querySelector('#uichoose').style.display = "block";
+                    }
+                    
+                     function gotofourth() {
+                        document.querySelector('#uichoose').style.display = "none";
+                        document.querySelector('#gettingready').style.display = "block";
+                        setTimeout(function(){ window.location.replace("main.html"); }, 2000)
+                    }
+                </script>
+            
+        </div>
+    </body>
+</html>
